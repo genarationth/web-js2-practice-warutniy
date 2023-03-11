@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1</title>
+</head>
+<body> 
+
+    <button onclick="myFunction()" >Create an Age Calculator</button>
+
+    <p id="card"></p>
+
+    <script>
+        function myFunction() {
+            let text1;
+            let text2;
+            let birthYear = prompt("What your birth year");
+            if (birthYear == null || birthYear == "") {
+                text1 = "";
+            } else {
+                text1 = birthYear;
+            }
+            let futureYear = prompt("What a future year");
+            if (futureYear == null || futureYear == "") {
+                text2 = "";
+            } else {
+                text2 = futureYear;
+            }
+        
+            document.getElementById("card").innerHTML = (futureYear-birthYear) + " years";
+        }
+    </script>
+
+</body>
+</html>

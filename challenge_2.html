@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2</title>
+</head>
+<body> 
+
+    <button onclick="myFunction()" >Create an information card</button>
+
+    <p id="card"></p>
+
+    <script>
+        function myFunction() {
+            let text1;
+            let text2;
+            let text3;
+            let name = prompt("What your name");
+            if (name == null || name == "") {
+                text1 = "{name}";
+            } else {
+                text1 = name;
+            }
+            let location = prompt("What your location");
+            if (location == null || location == "") {
+                text2 = "{location}";
+            } else {
+                text2 = location;
+            }
+            let hobby = prompt("What your hobby");
+            if (hobby == null || hobby == "") {
+                text3 = "{hobby}";
+            } else {
+                text3 = hobby;
+            }
+            document.getElementById("card").innerHTML = `Hi, my name is ${text1}. I live in ${text2} and enjoy ${text3}.`;
+        }
+    </script>
+
+</body>
+</html>
